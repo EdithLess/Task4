@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Розклад Занять</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      h1 {
+        color: #4caf50;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .list {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        background: #f9f9f9;
+      }
+      button {
+        margin: 5px 0;
+        padding: 5px 10px;
+      }
+      input {
+        margin: 5px 0;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Організація Розкладу Занять</h1>
+
+      <h2>Додати Студента/Викладача</h2>
+      <input id="personName" type="text" placeholder="Ім'я" />
+      <input id="personType" type="text" placeholder="Тип (студент/викладач)" />
+      <button onclick="addPerson()">Додати</button>
+
+      <h2>Додати Заняття</h2>
+      <input id="lessonDay" type="text" placeholder="День" />
+      <input id="lessonTime" type="text" placeholder="Час (hh:mm)" />
+      <input id="lessonPlace" type="text" placeholder="Місце" />
+      <button onclick="addLesson()">Додати Заняття</button>
+
+      <h2>Прив'язати до Заняття</h2>
+      <input
+        id="personForLesson"
+        type="text"
+        placeholder="Ім'я студента/викладача"
+      />
+      <input id="lessonId" type="number" placeholder="ID Заняття" />
+      <button onclick="assignToLesson()">Прив'язати</button>
+
+      <h2>Пошук Занять</h2>
+      <input
+        id="searchQuery"
+        type="text"
+        placeholder="День/викладач/категорія"
+      />
+      <button onclick="searchLessons()">Шукати</button>
+
+      <div id="output" class="list">Результати будуть тут.</div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
